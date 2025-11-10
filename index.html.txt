@@ -42,16 +42,16 @@
 
 
 
-          <img src="rocket.png" alt="Rocket" class="rocket">
+          <img src="images\rocket.png" alt="Rocket" class="rocket">
            
         </div>
         <div class="stars"></div>
 		<!-- Planets for the rocket path -->
 
-<img src="planet1.png" alt="Planet1" class="planet" id="planet1">
-<img src="planet2.png" alt="Planet2" class="planet" id="planet2">
+<img src="rocket\planet1.png" alt="Planet1" class="planet" id="planet1">
+<img src="rocket\planet2.png" alt="Planet2" class="planet" id="planet2">
 <!-- Astronaut -->
-<img src="astronuat.png" alt="Floating Astronaut" class="astronaut">
+<img src="rocket\astronuat.png" alt="Floating Astronaut" class="astronaut">
 
     </header>
 
