@@ -413,11 +413,11 @@ about-section {
 }
 
 .skills-overlay {
-  position: absolute;
-  top: 100px;
-  bottom: 100px;
-  left: 7%;
-  width: 22%;
+  /* or just remove this line */
+  top: auto;          /* remove top offset */
+  left: auto;         /* remove left offset */
+  width: 22%;         /* keeps it beside About Me */
+  max-width: 22%;
   background: rgba(0, 0, 0, 0.65);
   color: #2ECC71;
   padding: 25px;
@@ -511,6 +511,206 @@ about-section {
     margin-right: auto;
   }
 
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  /* Header: stack logo + nav */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    margin: 10px 0 0 0;
+  }
+
+  /* Pipeline scaling */
+  .pipeline-container {
+    transform: scale(0.6); /* scale down for small screens */
+    margin-bottom: -100px;
+  }
+
+  .pipeline-name {
+    font-size: 2.5rem; /* smaller heading */
+  }
+
+  /* Pipeline stages shrink */
+  .stage {
+    min-width: 80px;
+    padding: 0.5rem;
+  }
+
+  .line {
+    width: 40px; /* shorter connecting lines */
+  }
+
+  /* About Section adjustments */
+  .about-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-me {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .photo-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* Project Tiles stacked */
+  .project-tiles {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .project-tile {
+    width: 90%;
+    max-width: 300px;
+    padding: 25px;
+  }
+
+  /* Experience section adjustments */
+  .experience-inner {
+    width: 95%;
+  }
+
+  .exp-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .exp-company {
+    font-size: 1rem;
+  }
+
+  .exp-details li {
+    font-size: 0.9rem;
+  }
+
+  /* Contact section */
+  #contact {
+    padding: 150px 20px;
+  }
+
+  #contact p {
+    font-size: 1rem;
+  }
+
+  /* Tagline */
+  .tagline {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+
+ .about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+  }
+
+  .skills-overlay {
+    flex: 0 0 22%;
+    max-width: 22%;
+    min-width: 200px;
+    background: rgba(0,0,0,0.65);
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  @media (max-width: 900px) {
+    .about-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .skills-overlay {
+      flex: none;
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .skills-overlay > div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between; /* logo left, hamburger right */
+    align-items: center;            /* vertically center items */
+    padding: 10px 20px;
+    position: relative;             /* for dropdown nav */
+  }
+
+  .logo {
+    margin: 0;                      /* remove any default margin */
+    line-height: 1;                 /* align text properly */
+    font-size: 1.8rem;              /* same as desktop */
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;                 /* vertically aligned with logo */
+    z-index: 1100;                  /* above dropdown */
+  }
+
+  nav {
+    position: absolute;
+    top: 60px;                      /* just below header */
+    right: 0;                        /* align to right edge of header */
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;
+    width: 200px;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  nav.open {
+    max-height: 500px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;        /* items left-aligned inside dropdown */
+    padding: 10px;
+    gap: 10px;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+}
+
+
+
 
 </style>
 </head>
@@ -520,7 +720,7 @@ about-section {
 
 <header>
   <a href="#home" class="logo">David Renda</a>
-
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -567,64 +767,53 @@ about-section {
 </div>
   </div>
 </div>
-  <!-- About Me -->
-<div class="about-section">
-<div class="skills-overlay">
-<div class="languages-box">
-    <h3>Languages</h3>
-    <ul>
-      <li>English</li>
-      <li>French — A2</li>
-    </ul>
-  </div>
-  <div class="programming-language-box">
-    <h3>Programming Languages</h3>
-    <ul>
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Bash/Shell</li>
-    </ul>
-  </div>
-  <div class="skills-box">
-    <h3>Expertise</h3>
-    <ul>
-      <li>ETL/ELT pipeline design</li>
-      <li>Data Modeling</li>
-      <li>Workflow Orchestration</li>
-      <li>Data Warehousing design</li>
-      <li>Git & Version Control</li>
-    </ul>
-  </div>
-  <div class="skillqs-overlay-right">
-  <div class="tools-box">
-   
-    </ul>
-  </div>
 
-  <div class="cloud-box">
+ <div class="about-section">
+  <div class="about-wrapper">
+    <!-- About Inner -->
+    <div class="about-inner">
+      <div class="about-layout">
+        <div class="photo-circle"></div>
+        <div class="section-title" id="about">About Me</div>
+        <div class="about-me">
+          I’m passionate about turning complexity into clarity. Over the past several years, I’ve worked across data pipelines, cloud architecture, and analytics engineering with one goal in mind: making data reliable, accessible, and genuinely useful. I focus on designing systems that scale, automating repetitive tasks, and helping teams understand the immense value of well-structured data. 
+          I also run a weekly newsletter aimed at bringing like-minded individuals together, providing guidance for those looking to break into the data industry, and sharing lessons I’ve learned over the course of my career. It’s a space where I teach practical skills, discuss emerging trends, and help others navigate the complexities of modern data engineering and analytics.
+        </div>
+      </div>
+    </div>
 
-    </ul>
+    <!-- Skills Overlay -->
+    <div class="skills-overlay">
+      <div class="languages-box">
+        <h3>Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>French — A2</li>
+        </ul>
+      </div>
+      <div class="programming-language-box">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Bash/Shell</li>
+        </ul>
+      </div>
+      <div class="skills-box">
+        <h3>Expertise</h3>
+        <ul>
+          <li>ETL/ELT pipeline design</li>
+          <li>Data Modeling</li>
+          <li>Workflow Orchestration</li>
+          <li>Data Warehousing design</li>
+          <li>Git & Version Control</li>
+        </ul>
+      </div>
+    </div>
   </div>
-
-  
 </div>
 
-</div>
-
-
-
-  <div class="about-inner">
-  <div class="about-layout">
-  <div class="photo-circle"></div>
-  <div class="section-title" id="about">About Me</div>
-
-  <div class="about-me">
-    I’m passionate about turning complexity into clarity. Over the past several years, I’ve worked across data pipelines, cloud architecture, and analytics engineering with one goal in mind: making data reliable, accessible, and genuinely useful. I focus on designing systems that scale, automating repetitive tasks, and helping teams understand the immense value of well-structured data. 
-I also run a weekly newsletter aimed at bringing like-minded individuals together, providing guidance for those looking to break into the data industry, and sharing lessons I’ve learned over the course of my career. It’s a space where I teach practical skills, discuss emerging trends, and help others navigate the complexities of modern data engineering and analytics.</div>
-</div>
-
-</div>
-</div>
+ 
   <!-- Projects Section -->
   <div class="projects" id="projects">
     <div class="section-title">Projects</div>
@@ -814,6 +1003,12 @@ function showResults() {
 // kick things off
 runPipeline();
 </script>
+<script>
+function toggleMenu() {
+  document.querySelector("nav").classList.toggle("open");
+}
+</script>
+
 
 </body>
 </html>
