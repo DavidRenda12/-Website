@@ -26,7 +26,7 @@
     top: 0;
     z-index: 1000;
   }
-  
+
   .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -60,27 +60,6 @@
 
   nav ul li a:hover {
     color: #1d1d1d;
-  }
-
-  /* Sticky CTA Button */
-  .sticky-cta {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: linear-gradient(135deg, #F39C12, #e67e22);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 0 8px 20px rgba(243, 156, 18, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-    z-index: 999;
-  }
-
-  .sticky-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(243, 156, 18, 0.6);
   }
 
   /* Content */
@@ -122,9 +101,7 @@
     gap: 40px;
     margin-bottom: 2rem;
   }
-  .hamburger {
-    display: none;
-  }
+
   .stage {
     display: flex;
     flex-direction: column;
@@ -209,10 +186,7 @@
 
   font-size: 2.8rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #F39C12, #e67e22);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #F39C12;
   min-height: 150px;
   margin-top: -20px;
   opacity: 0;
@@ -306,49 +280,28 @@
     padding: 35px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
     margin-top: 50px;
-    border-left: 4px solid transparent;
   }
 
   .project-tile:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(243, 156, 18, 0.2);
-    border-left-color: #F39C12;
-    background: #fafafa;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   }
 
   .project-tile h3 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.5rem;
     color: #F39C12;
   }
 
   .project-tile p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #555555;
-    line-height: 1.6;
-    margin-bottom: 12px;
+    line-height: 1.4;
   }
-
-  .project-tile strong {
-    color: #1d1d1d;
-    font-weight: 600;
-  }
-
-  .project-tile a {
-    color: #F39C12;
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.2s;
-  }
-
-  .project-tile a:hover {
-    color: #e67e22;
-  }
-
 .experience-section {
   width: 100%;
   background: #1b1b1b;
@@ -717,9 +670,9 @@ about-section {
   }
 
   nav {
-    position: fixed;
+    position: absolute;
     top: 60px;                      /* just below header */
-    right: 20px;                    /* align to right with padding */
+    right: 0;                        /* align to right edge of header */
     background: #f5f5f5;
     border-radius: 8px;
     overflow: hidden;
@@ -747,14 +700,6 @@ about-section {
   }
 }
 
-  .sticky-cta {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-  }
-}
-
 html, body {
   overflow-x: hidden;
 }
@@ -766,9 +711,6 @@ html, body {
 <body id="home">
 <!-- Dark vertical underlay -->
 <div class="underlay"></div>
-
-<!-- Sticky CTA Button -->
-<a href="#contact" class="sticky-cta">Let's Talk</a>
 
 <header>
   <a href="#home" class="logo">David Renda</a>
@@ -828,9 +770,9 @@ html, body {
         <div class="photo-circle"></div>
         <div class="section-title" id="about">About Me</div>
         <div class="about-me">
-         Hi! I'm David, a data architect with a full-stack background spanning networking, cloud infrastructure, and end-to-end data pipelines. I started my career hands-on with LAN/WAN design and server deployments, gradually evolving into cloud infrastructure and data-driven projects. Over the years, I've built robust ETL/ELT pipelines, migrated legacy systems to modern cloud architectures, and enabled data-informed decision-making across organizations.
+         Hi! I’m David, a data architect with a full-stack background spanning networking, cloud infrastructure, and end-to-end data pipelines. I started my career hands-on with LAN/WAN design and server deployments, gradually evolving into cloud infrastructure and data-driven projects. Over the years, I’ve built robust ETL/ELT pipelines, migrated legacy systems to modern cloud architectures, and enabled data-informed decision-making across organizations.
 
-I'm passionate about MLOps and AI/ML workflows, experimenting with model deployment, automation, and workflow orchestration. I also run The Data Mothership, a weekly newsletter where I share insights and experiments in data architecture design, engineering and analytics.</div>
+I’m passionate about MLOps and AI/ML workflows, experimenting with model deployment, automation, and workflow orchestration. I also run The Data Mothership, a weekly newsletter where I share insights and experiments in data architecture design, engineering and analytics.</div>
       </div>
     </div>
 
@@ -881,7 +823,7 @@ I'm passionate about MLOps and AI/ML workflows, experimenting with model deploym
 </div>
 
  
-  <!-- Projects Section -->
+<!-- Projects Section -->
   <div class="projects" id="projects">
     <div class="section-title">Recent Projects</div>
     <div class="project-tiles">
@@ -891,8 +833,8 @@ I'm passionate about MLOps and AI/ML workflows, experimenting with model deploym
         <p><strong>Solution:</strong> Built automated ETL pipeline scraping 5,400+ jobs directly from Greenhouse APIs every 3 hours, bypassing job boards entirely.</p>
         <p><strong>Impact:</strong> See opportunities 2-7 days before competitors on LinkedIn/Indeed. Interactive dashboard with real-time filtering, search, and application tracking.</p>
         <p><strong>Tech:</strong> Python (requests, pandas), HTML/CSS/JavaScript, Git, Windows Task Scheduler</p>
-        <p style="margin-top: 15px;">
-          <a href="https://David12.github.io/job-board/job_dashboard.html" target="_blank">View Dashboard →</a>
+        <p style="margin-top: 15px; font-size: 1rem;">
+          <a href="https://DavidRenda12.github.io/job-board/job_dashboard.html" target="_blank" style="color: #F39C12; font-weight: 700; text-decoration: none;">View Dashboard →</a>
         </p>
       </div>
       <div class="project-tile">
