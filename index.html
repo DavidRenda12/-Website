@@ -828,9 +828,11 @@ html, body {
         <div class="photo-circle"></div>
         <div class="section-title" id="about">About Me</div>
         <div class="about-me">
-         Hi! I'm David, a data architect with a full-stack background spanning networking, cloud infrastructure, and end-to-end data pipelines. I started my career hands-on with LAN/WAN design and server deployments, gradually evolving into cloud infrastructure and data-driven projects. Over the years, I've built robust ETL/ELT pipelines, migrated legacy systems to modern cloud architectures, and enabled data-informed decision-making across organizations.
+         Hi! I'm David, a Senior Azure Cloud and Data Architect with 10 years of experience spanning infrastructure, security, networking, and analytics on the Microsoft Azure platform. I started my career hands-on with LAN/WAN design and server deployments, evolving into full-stack Azure architecture covering everything from AVS migrations and hybrid networking to enterprise data platforms and Power BI at scale.
 
-I'm passionate about MLOps and AI/ML workflows, experimenting with model deployment, automation, and workflow orchestration. I also run The Data Mothership, a weekly newsletter where I share insights and experiments in data architecture design, engineering and analytics.</div>
+I specialize in the Microsoft ecosystem. On the infrastructure side I design and operate hub and spoke VNet topologies, ExpressRoute and Global Reach hybrid connectivity, Azure VMware Solution, Microsoft Sentinel, and Azure Arc deployments. On the data side I architect end-to-end platforms using Azure Data Factory, Synapse Analytics, Microsoft Fabric, dbt, and Power BI serving hundreds of users across complex organizational hierarchies.
+
+I am currently finishing my DP-600 Microsoft Fabric Analytics Engineer certification, adding to my AZ-104 and AZ-305 credentials. I also run The Data Mothership, a weekly newsletter covering Azure data engineering, cloud architecture, and Microsoft Fabric.</div>
       </div>
     </div>
 
@@ -852,29 +854,34 @@ I'm passionate about MLOps and AI/ML workflows, experimenting with model deploym
         </ul>
       </div>
       <div class="skills-box">
-        <h3>Expertise</h3>
-        <ul>
-          <li>ETL/ELT pipeline design</li>
-          <li>Data Modeling</li>
-          <li>Workflow Orchestration</li>
-          <li>Data Warehousing design</li>
-          <li>Git & Version Control</li>
-        </ul>
-        </div>
-        <div class="tools-box">
-        <h3>Tools</h3>
-        <ul>
-          <li>Azure Data Factory</li>
-          <li>Data Bricks</li>
-          <li>Power Query/Data Flows</li>
-          <li>Azure Data Lake Storage</li>
-          <li>Power BI</li>
-          <li>dbt</li>
-          <li>Mulesoft</li>
-          <li>Snowflake</li>
-          <li>Tableau</li>
-        </ul>
-      </div>
+  <h3>Expertise</h3>
+  <ul>
+    <li>Azure Cloud Architecture</li>
+    <li>Hybrid Cloud and Networking</li>
+    <li>ETL/ELT Pipeline Design</li>
+    <li>Data Modeling and Dimensional Design</li>
+    <li>Semantic Modeling and DAX</li>
+    <li>Security and Governance</li>
+    <li>CI/CD and DevOps</li>
+  </ul>
+</div>
+<div class="tools-box">
+  <h3>Tools</h3>
+  <ul>
+    <li>Azure Data Factory</li>
+    <li>Azure Synapse Analytics</li>
+    <li>Microsoft Fabric</li>
+    <li>Azure Data Lake Storage</li>
+    <li>Power BI</li>
+    <li>dbt Core</li>
+    <li>Databricks</li>
+    <li>Microsoft Sentinel</li>
+    <li>Azure Arc</li>
+    <li>Azure DevOps</li>
+    <li>Terraform and Bicep</li>
+    <li>Power Apps and Power Automate</li>
+  </ul>
+</div>
       </div>
     </div>
   </div>
@@ -925,23 +932,22 @@ I'm passionate about MLOps and AI/ML workflows, experimenting with model deploym
 
     <div class="experience-item">
       <div class="exp-header">
-        <h3>Data Architect</h3>
+        <h3>Azure Cloud and Data Architect</h3>
         <span class="exp-date">2022 — Present</span>
       </div>
-      <h4 class="exp-company">California Department of Community Services and Development</h4>
-      <ul class="exp-details">
-        <li>Led end-to-end modernization of Dynamics CRM analytics platform, implementing Synapse Link
-→ ADLS → Synapse Pipelines → dbt → embedded Power BI, replacing legacy SSRS architecture.</li>
-<li>Designed and operated scalable ELT frameworks in Azure (ADF, Synapse, Databricks) supporting
-high-volume transactional and event-based data workloads.</li>
-<li>Architected secure data platform integrations using VNETs, private endpoints, managed
-identities, and RBAC to enforce governance and compliance.</li>
-<li>Established modular dbt modeling standards to improve transformation reliability,
-maintainability, and cross-team development velocity.</li>
-<li>Implemented monitoring and observability using Azure Monitor and Log Analytics to enforce
-data freshness, latency, and reliability SLAs.</li>
-<li>Partnered with application, analytics, and product teams to embed analytics directly into
-enterprise workflows</li>
+<h4 class="exp-company">California Department of Community Services and Development</h4>
+<ul class="exp-details">
+  <li>Migrated 70 on-premises VMware ESXi servers to Azure VMware Solution using HCX, managing cutover sequencing and hybrid connectivity end to end across AVS, native Azure, and on-premises environments via ExpressRoute and Global Reach.</li>
+  <li>Designed hub and spoke VNet topology, configured ExpressRoute circuits, and resolved routing between AVS, native Azure, and on-premises using Global Reach. Manage approximately 100 VMs including right sizing, disk management, and IIS administration on Windows Server 2016 and 2019.</li>
+  <li>Deployed Azure Arc across all 70 AVS servers, configured Microsoft Defender for Servers across the AVS fleet, and designed Microsoft Sentinel as the enterprise SIEM integrating syslog feeds from all network devices through a centralized syslog server.</li>
+  <li>Led full HPE Aruba switching and wireless infrastructure refresh replacing legacy hardware with new HPE Aruba infrastructure managed through HPE GreenLake. Manage on-premises network including core switches, access switches, APs, and firewalls.</li>
+  <li>Led end-to-end modernization of Dynamics CRM analytics platform, implementing Synapse Link, ADLS, Synapse Pipelines, dbt, and embedded Power BI, replacing legacy SSRS architecture serving 560 users across 70 agencies statewide.</li>
+  <li>Reduced report query times from 5 to 10 seconds to under 1 second with 99% report availability and hourly refresh SLA negotiated and proven through empirical DirectQuery load testing.</li>
+  <li>Architected secure data platform integrations using VNets, private endpoints, managed identities, and RBAC. Managed Azure Key Vault for all pipeline secrets enforcing zero hardcoded credentials across ADF and Azure DevOps pipelines.</li>
+  <li>Implemented enterprise RLS across 70 agency organizational hierarchy using nested CALCULATETABLE and USERPRINCIPALNAME DAX patterns. Built Power Apps provisioning tool and Power Automate workflows for automated user access management.</li>
+  <li>Established modular dbt modeling standards to improve transformation reliability, maintainability, and cross-team development velocity. Maintained dev/test/prod deployment pipelines with Azure DevOps and dbt CI/CD automation.</li>
+  <li>Implemented monitoring and observability using Azure Monitor and Log Analytics to enforce data freshness, latency, and reliability SLAs. Implemented row count and checksum reconciliation after every pipeline run for data integrity assurance.</li>
+</ul>
 
 
   
@@ -951,21 +957,20 @@ enterprise workflows</li>
 
     <div class="experience-item">
       <div class="exp-header">
-        <h3>Data Engineer</h3>
+        <h3>Azure Cloud and Data Engineer</h3>
         <span class="exp-date">2017 — 2022</span>
       </div>
       <h4 class="exp-company">AH Parts</h4>
       <ul class="exp-details">
-        <li>Designed, deployed, and maintained LAN/WAN networks and virtualized server environments, building a foundation for reliable data operations.</li>
-    <li>Managed Active Directory, user permissions, storage solutions, and virtual servers, ensuring structured access and governance of operational and business-critical data.</li>
-    <li>Implemented automated scripts to streamline server maintenance, backups, and monitoring, reducing manual intervention and preparing datasets for reporting and analytics.</li>
-    <li>Monitored system performance and network traffic, identifying bottlenecks and ensuring high availability for both operational and emerging data pipelines.</li>
-    <li>Collaborated with security and IT teams to enforce compliance, firewall rules, and access controls, securing sensitive data while supporting analytics initiatives.</li>
-    <li>Documented systems, workflows, and operational procedures, creating reusable references for both infrastructure and early-stage data projects.</li>
-    <li>Supported early cloud adoption and hybrid deployments, preparing on-premises infrastructure for integration with cloud-based data storage and processing solutions.</li>
-    <li>Participated in data-related projects, including automating data extraction from operational systems and integrating datasets to support reporting and analytics.</li>
-    <li>Developed ownership of end-to-end data movement workflows, gaining experience in ETL concepts, data validation, and pipeline reliability even before formally becoming a data engineer.</li>
-      </ul>
+  <li>Modernized on-premises ETL infrastructure to Azure Data Factory and Databricks, reducing manual data refresh cycles from hours to minutes.</li>
+  <li>Built incremental ADF pipelines with watermark columns and ROW_NUMBER deduplication patterns for high-volume transactional data.</li>
+  <li>Performed Databricks optimization including broadcast joins and partition tuning achieving approximately 25% cost reduction on compute.</li>
+  <li>Built and maintained Azure SQL and SQL Server environments supporting operational and BI workloads across business units.</li>
+  <li>Modeled datasets optimized for analytics and reporting consumption, collaborating with analytics teams to deliver BI dashboards.</li>
+  <li>Managed Active Directory, user permissions, and storage solutions ensuring structured access and governance of business-critical data.</li>
+  <li>Monitored system performance and network traffic, identifying bottlenecks and ensuring high availability for operational and data pipelines.</li>
+  <li>Collaborated with security and IT teams to enforce compliance, firewall rules, and access controls securing sensitive data.</li>
+</ul>
     </div>
 
 
@@ -1008,10 +1013,12 @@ const stageStatus = {
 };
 
 const roles = [
-"Data Architect",
-"Business Analyst",  
-"Data Engineer",
-"MLOps Engineer"
+"Azure Cloud Architect",
+"Data Platform Architect",
+"Microsoft Fabric Engineer",
+"Power BI Architect",
+"Azure Infrastructure Architect",
+"Analytics Engineer"
 
   
 ];
